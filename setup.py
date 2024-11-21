@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from setuptools import setup, find_packages
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -9,16 +7,16 @@ setup(
     name='gt_avo',  # Geophysical Tools: AVO
     version='0.1.0',  # Versão Inicial
     description='Conjunto de Funções para Análise de AVO e afins',
-    long_description=open('README.md', 'r').read(),  # Conteúdo do README
-    url="https://github.com/1348-1991/Geophysical_Tools/gt-avo",
+    long_description=long_description,  # Use previously defined variable
+    url="https://github.com/1348-1991/gt-avo",
     author='Vitor Azevedo dos Santos',
     author_email='vitors@id.uff.br',
-    packages=['gt_avo'],  # gt_avo
+    packages=find_packages(),  # Automatically find packages
     install_requires=[
-    "numpy>=1.23.0",  # Especificar versão mínima
-    "matplotlib>=3.5.0",
-    "pandas>=1.4.0",
-    "scipy>=1.9.0",  # Adicionar SciPy para funcionalidades numéricas
+        "numpy>=1.23.0",  # Specify version mínima
+        "matplotlib>=3.5.0",
+        "pandas>=1.4.0",
+        "scipy>=1.9.0",  # Additional dependency for numerical functions
     ],
     extras_require={
         "dev": [
@@ -38,6 +36,5 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.8",   
-
+    python_requires=">=3.8",
 )
