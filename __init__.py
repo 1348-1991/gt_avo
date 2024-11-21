@@ -37,3 +37,14 @@
 #   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from . import gt_avo
+from . import akirichards
+from . import shuey
+from . import shuey2
+from . import intercept
+from . import gradient
+from . import earth_model
+from . import ricker_wav
+from . import ref_c
+from . import a_gather
+from . import off_gather
+from . import norm_wavelet
